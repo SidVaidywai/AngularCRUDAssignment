@@ -1,0 +1,79 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "firstName": "Siddharth",
+      "email": "hh",
+      "country": "India",
+      "avatar": "https://st2.depositphotos.com/1006318/5909/v/950/depositphotos_59095055-stock-illustration-profile-icon-male-avatar.jpg",
+      "dateofBirth": "1995-06-28"
+    },
+    {
+      "id": 4,
+      "firstName": "ShriKrushna Ghodkhe",
+      "email": "vks@gmail.com",
+      "country": "India6",
+      "avatar": "https://previews.123rf.com/images/metelsky/metelsky1809/metelsky180900233/109815470-man-avatar-profile-male-face-icon-vector-illustration-.jpg",
+      "dateofBirth": "1996-10-18",
+      "age": null
+    },
+    {
+      "id": 5,
+      "firstName": "Venu Ghodkhe",
+      "email": "vks@gmail.com",
+      "country": "India",
+      "avatar": "https://icon-library.com/images/woman-profile-icon/woman-profile-icon-6.jpg",
+      "dateofBirth": "1998-12-12",
+      "age": null
+    },
+    {
+      "id": 6,
+      "firstName": "Prakash",
+      "email": "pm@gmail.com",
+      "country": "India",
+      "avatar": "https://image.shutterstock.com/image-vector/man-character-face-avatar-glasses-260nw-562077406.jpg",
+      "dateofBirth": "1997-04-02",
+      "age": null
+    },
+    {
+      "id": 7,
+      "firstName": "Mahesh",
+      "email": "sfsfsfsdf@fgfg.com",
+      "country": "india",
+      "avatar": "https://st2.depositphotos.com/1006318/5909/v/950/depositphotos_59094779-stock-illustration-profile-icon-male-avatar.jpg",
+      "dateofBirth": "2008-06-06",
+      "age": null
+    },
+    {
+      "id": 8,
+      "firstName": "Mahesh",
+      "email": "sfsfsfsdf@fgfg.com",
+      "country": "sfsfsfsdf@fgfg.com",
+      "avatar": "https://icon-library.com/images/woman-profile-icon/woman-profile-icon-6.jpg",
+      "dateofBirth": "2022-03-30",
+      "age": null
+    },
+    {
+      "id": 9,
+      "firstName": "ShriKrushna Ghodkhe",
+      "email": "sfsfsfsdf@fgfg.com",
+      "country": null,
+      "avatar": "https://previews.123rf.com/images/metelsky/metelsky1809/metelsky180900233/109815470-man-avatar-profile-male-face-icon-vector-illustration-.jpg",
+      "dateofBirth": "2018-02-11",
+      "age": null
+    },
+    {
+      "id": 10,
+      "firstName": null,
+      "email": null,
+      "country": null,
+      "avatar": null,
+      "dateofBirth": null,
+      "age": null
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

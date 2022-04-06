@@ -1,0 +1,94 @@
+
+<nav class="navbar navbar-light bg-warning">
+    <div class="container-fluid">
+        <h5 style="color: white;">
+            EMPLOYEE DETAILS
+            <!-- <img src="https://previews.123rf.com/images/yupiramos/yupiramos1510/yupiramos151007156/46543204-business-employee-people-over-yellow-background-vector-illustration.jpg" alt="" style="width: 5%;"> -->
+        </h5>
+          <div class="d-flex">
+              <button (click)="clickAddEmployee()"  type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Employee</button>
+          </div>
+    </div>
+</nav>
+
+
+
+<div class="row">
+  <div class="col-md-3  mt-5" *ngFor="let card of employeeData">
+    <div class="m-2 card shadow p-3 mb-5  rounded " style="width: 20rem; height: 30rem; background-color: lightblue">
+       <img src="{{card.avatar}}" alt="{{card.avatar}}" srcset="" href=""  style="width: 150px; margin-left: 40px;"> 
+      <div class="card-body h-100 ">
+        <!-- <h5 class="card-title">{{card.id}}</h5> -->
+        <p class="card-text">Name-{{card.firstName}}</p>
+        <p class="card-text">Email-{{card.email}}</p>
+        <p class="card-text">Age-{{card.dateofBirth |  age}}</p>
+        <p class="card-text">Country-{{card.country}}</p>
+        <!-- <p class="card-text">Avatar-{{card.avatar}}</p> -->
+      </div>
+      <hr>
+      <div>
+        <button (click)="onEdit(card)" class="btn btn-info " type="button"data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+        <button  (click)="deleteEmployee(card.id)" class="btn btn-danger mx-3">Delete</button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Employee Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formValue" >
+
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">First Name</label>
+                  <input type="text"   formControlName="firstName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"><br>
+                  <span class="text-danger" *ngIf="formValue.controls['firstName'].touched && formValue.hasError('required','firstName')">*Name is required</span>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Email ID</label>
+                    <input type="email"  formControlName="email" class="form-control" id="exampleInputPassword1"  (keyup)="validate(formValue.controls['email'])"><br>
+                    <span class="text-danger" *ngIf="formValue.controls['email'].touched && formValue.hasError('required','email')" >*Email is required</span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Date of Birth</label>
+                    <input type="date" formControlName="dateofBirth" class="form-control" id="exampleInputPassword1">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Country</label>
+                    <input type="text" formControlName="country" class="form-control" id="exampleInputPassword1" >
+                    <span class="text-danger" *ngIf="formValue.controls['country'].touched && formValue.hasError('required','country')">*country is required</span>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Avatar</label>
+                    <input type="text" formControlName="avatar" class="form-control" id="#avatar" >
+                    <span class="text-danger" *ngIf="formValue.controls['avatar'].touched && formValue.hasError('required','avatar')">*Email is required</span> 
+                </div> 
+
+                <div class="modal-footer">
+                  <button type="button" id="cancel"  class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button"   *ngIf="showAdd"   (click)="postEmployeeDetails()" class="btn btn-primary" >Add</button>
+                  <input type="submit" *ngIf="showUpdate" (click)="updateEmployeeDetails()" class="btn btn-primary" value="Update">
+                </div>
+
+             
+              </form>
+        </div>
+       
+       
+      </div>
+    
+    </div>
+  </div>
